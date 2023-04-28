@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Lab7</title>
+    </head>
+    <body onload="main()">
+        <div id="app">
+            <div id="header">
+                <div id="logo">Погода</div>
+                <form class="searchbar" onsubmit="loadWeatherFromInput(); return false;">
+                    <input id="search_input" type="search" placeholder="Введите город..." autocomplete="off" />
+                    <button class="search-button"><span class="material-icons md-light">search</span></button>
+                </form>
+            </div>
+            <div class="error-box-hidden" id="error-box">
+                <span class="material-icons crimson" id="error-icon">error</span>
+                <span id="error-text"></span>
+            </div>
+            <div id="weather-box">
+                <div id="location">
+                    <span class="material-icons" id="geo-icon"> place </span>
+                    <span id="city-name">und</span>
+                </div>
+                <div id="weather-desc">
+                    <div id="weather-left">
+                        <div id="temperature">
+                            <div id="temp">und</div>
+                            <div id="feels-like-box">
+                                Ощущается как:
+                                <span id="feels-like">und</span>
+                            </div>
+                        </div>
+                        <div id="desc">
+                            <div id="weather-icon">und</div>
+                            <div id="desc-text">und</div>
+                        </div>
+                    </div>
+                    <div id="weather-specs">
+                        <div class="spec-box" id="wind-box">
+                            <span id="wind-icon"><span class="material-icons sized"> air </span></span>
+                            <span class="spec" id="wind">und</span>
+                        </div>
+                        <div class="spec-box" id="humidity-box">
+                            <span id="humidity-icon"><span class="material-icons sized"> water_drop </span></span>
+                            <span class="spec" id="humidity">und</span>
+                        </div>
+                        <div class="spec-box" id="pressure-box">
+                            <span id="pressure-icon"><span class="material-icons sized"> av_timer </span></span>
+                            <span class="spec" id="pressure">und</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="forecast">
+                    <div class="cast">
+                        <div class="cast-time">12:00</div>
+                        <div class="cast-temp">
+                            <span class="cast-main">und</span>
+                            <div class="cast-temp-icon">ICO</div>
+                        </div>
+                        <div class="cast-desc">und</div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-time">15:00</div>
+                        <div class="cast-temp">
+                            <span class="cast-main">und</span>
+                            <div class="cast-temp-icon">ICO</div>
+                        </div>
+                        <div class="cast-desc">und</div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-time">18:00</div>
+                        <div class="cast-temp">
+                            <span class="cast-main">und</span>
+                            <div class="cast-temp-icon">ICO</div>
+                        </div>
+                        <div class="cast-desc">und</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
